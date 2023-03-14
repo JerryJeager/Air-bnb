@@ -4,11 +4,11 @@ const Card = ({data}) => {
     let badgeText = null    
 
   return (
-    <div className="mt-6  flex justify-between pl-6 w-full gap-x-4 relative">
+    <div className="mt-6  flex justify-between pl-6 w-full gap-x-4 relative md:w-[600px] md:mx-auto">
         {data.map((item) => (
             <div key={item.id}>
 
-                <img src={`/img/${item.coverImg}`} alt="" className="h-[150px]"/>
+                <img src={`/img/${item.coverImg}`} alt="" className="h-[150px] md:h-[250px] md:w-[230px]"/>
                 <div className="absolute p-1 w-12 bg-white top-1 ml-1 rounded-sm text-[.5rem] flex align-center justify-center">{badgeText = item.openSpots === 0 ? 'SOLD OUT' : 'ONLINE'}</div>
 
                 <p>
